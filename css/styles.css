@@ -3,11 +3,42 @@ body{
     color: #434455;
     background-color: #FFFFFF;
 }
+
+h1,h2,h3,h4,h5,h6{
+    margin: 0;
+}
+
+p{
+    margin: 0;
+}
+
+img{
+    display: block;
+}
+
 a{
     text-decoration: none;
 }
-ul{
+ul, ol{
     list-style: none;
+    margin: 0;
+    padding-left: 0;
+}
+
+.container{
+    width: 100%;
+    max-width: 1168px; /* ширина всього контенту */
+    padding-left: 15px; /* падінги для того шоб відкріпити контейнер від країв екрану */
+    padding-right: 15px;
+    margin: 0 auto;
+    outline: 1px solid tomato;
+
+}
+
+.header{
+    padding-top: 25.5px;
+    padding-bottom: 25.5px;
+
 }
 
 .header-logo-link{
@@ -50,6 +81,8 @@ ul{
 
 .solutions{
     background-color: #2E2F42;
+    padding-top: 188px;
+    padding-bottom: 292px;
 }
 .solutions-title{
     text-align: center;
@@ -58,6 +91,8 @@ ul{
     font-weight: 700;
     line-height: 1.07;
     letter-spacing: 0.02em;
+    margin-bottom: 48px;
+    max-width: 496px;
 }
 .solutions-btn{
     font-family: inherit;
@@ -77,6 +112,8 @@ ul{
 
 .goals{
     background-color: #FFFFFF;
+    padding-top: 120px;
+    padding-bottom: 120px;
 }
 .goals-subtitle{
     color: #2e2f42;
@@ -95,7 +132,9 @@ ul{
 
 
 .team{
-    background-color: #F4F4FD
+    background-color: #F4F4FD;
+    padding-top: 120px;
+    padding-bottom: 120px;
 }
 .team-title{
     color: #2e2f42;
@@ -105,6 +144,7 @@ ul{
     line-height: 1.11;
     letter-spacing: 0.02em;
     text-transform: capitalize;
+    padding-bottom: 72px;
 }
 .team-list-item{
     background-color: #FFFFFF;
@@ -129,6 +169,8 @@ ul{
 
 .portfolio{
     background-color: #FFFFFF;
+    padding-top: 120px;
+    padding-bottom: 120px;
 }
 .portfolio-list-item{
     background-color: #FFFFFF;
@@ -141,6 +183,7 @@ ul{
     line-height: 1.1;
     letter-spacing: 0.02em;
     text-transform: capitalize;
+    padding-bottom: 72px;
 }
 .portfolio-subtitle{
     color: #2e2f42;
@@ -160,6 +203,8 @@ ul{
 
 .footer{
     background-color: #2E2F42;
+    padding-top: 101.5px;
+    padding-bottom: 100px;
 }
 .footer-logo-link{
     color: #4d5ae5;
@@ -179,4 +224,6 @@ ul{
     font-weight: 400;
     line-height: 1.5;
     letter-spacing: 0.02em;
+    padding-top: 17.5px;
+    max-width: 264px;
 }
