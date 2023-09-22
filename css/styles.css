@@ -65,7 +65,7 @@ ul, ol{
 
 .header-navigation{
     display: flex;
-    /* align-items: center; */
+    align-items: center;
 }
 
 .header-logo-link{
@@ -94,6 +94,8 @@ ul, ol{
     font-weight: 500;
     line-height: 1.5;
     letter-spacing: 0.02em;
+    padding-top: 24px;
+    padding-bottom: 24px;
 }
 .header-menu-link:hover, .header-menu-link:focus{
     color: #404bbf;
