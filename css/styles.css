@@ -14,31 +14,57 @@ p{
 
 img{
     display: block;
+    max-width: 100%;
+    height: auto;
 }
 
 a{
     text-decoration: none;
 }
+
 ul, ol{
     list-style: none;
-    margin: 0;
+    margin: 0 auto;
     padding-left: 0;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
 }
 
 .container{
     width: 100%;
-    max-width: 1168px; /* ширина всього контенту */
-    padding-left: 15px; /* падінги для того шоб відкріпити контейнер від країв екрану */
+    max-width: 1158px; /* ширина всього контенту */
+    padding-left: 15px; 
     padding-right: 15px;
     margin: 0 auto;
     outline: 1px solid tomato;
-
 }
+
+
 
 .header{
     padding-top: 25.5px;
     padding-bottom: 25.5px;
+}
 
+.header-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.navigation-container{
+    display: flex;
+    align-items: center;
 }
 
 .header-logo-link{
@@ -53,6 +79,20 @@ ul, ol{
 .header-name{
     color: #2e2f42;
 }
+
+.header-navigation {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 76px;
+}
+
+.header-menu-list{
+    display: flex;
+    align-items: center;
+        justify-content: flex-start;
+    gap: 40px;
+}
 .header-menu-link{
     color: #2E2F42;
     font-size: 16px;
@@ -65,6 +105,10 @@ ul, ol{
 }
 .header-address {
     font-style: normal;
+}
+.header-address-list{
+    display: flex;
+    gap: 40px;
 }
 .header-address-link{
     color: #434455;
@@ -79,6 +123,8 @@ ul, ol{
 }
 
 
+
+
 .solutions{
     background-color: #2E2F42;
     padding-top: 188px;
@@ -86,6 +132,7 @@ ul, ol{
 }
 .solutions-title{
     text-align: center;
+    margin: 0 auto;
     color: white;
     font-size: 56px;
     font-weight: 700;
@@ -95,19 +142,26 @@ ul, ol{
     max-width: 496px;
 }
 .solutions-btn{
+    display: block;
+    margin: 0 auto;
     font-family: inherit;
-    background: #4D5AE5;
     color: white;
     font-size: 16px;
     font-weight: 500;
     line-height: 1.5;
     letter-spacing: 0.04em;
     cursor: pointer;
+    padding: 16px 32px;
+    border-radius: 4px;
+    border: none;
+    background-color:#4D5AE5;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
 }
 .solutions-btn:hover, .solutions-btn:focus{
     background-color: #404BBF;
-
 }
+
+
 
 
 .goals{
@@ -115,12 +169,23 @@ ul, ol{
     padding-top: 120px;
     padding-bottom: 120px;
 }
+.goals-list{
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.goals-list-item{
+    width: calc((100% - 24px * 3) / 4);
+}
+
 .goals-subtitle{
     color: #2e2f42;
     font-size: 20px;
     font-weight: 500;
     line-height: 1.2;
     letter-spacing: 0.02em;
+    padding-bottom: 8px;
 }
 .goals-descr{
     color: #434455;
@@ -135,6 +200,11 @@ ul, ol{
     background-color: #F4F4FD;
     padding-top: 120px;
     padding-bottom: 120px;
+    flex-shrink: 0;
+}
+.team-list{
+    display: flex;
+    gap: 24px;
 }
 .team-title{
     color: #2e2f42;
@@ -147,8 +217,21 @@ ul, ol{
     padding-bottom: 72px;
 }
 .team-list-item{
-    background-color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    column-gap: 32px;
+    width: calc((100% - 24px * 3) / 4);
+    align-items: center;
+    border-radius: 0px 0px 4px 4px;
+    background: var(--WHITE, #FFF);
+    box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
 }
+
+.card-content{
+    padding-top: 32px;
+    padding-bottom: 32px;
+}
+
 .team-subtitle{
     color: #2e2f42;
     text-align: center;
@@ -156,6 +239,7 @@ ul, ol{
     font-weight: 500;
     line-height: 1.2;
     letter-spacing: 0.02em;
+    padding-bottom: 8px;
 }
 .team-descr{
     color: #434455;
@@ -167,13 +251,26 @@ ul, ol{
 }
 
 
+
+
 .portfolio{
     background-color: #FFFFFF;
     padding-top: 120px;
     padding-bottom: 120px;
 }
+.portfolio-list{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+}
 .portfolio-list-item{
     background-color: #FFFFFF;
+    border: 1px solid var(--CORNFLOWER, #E7E9FC);
+    width: calc((100% - 24px * 2) / 3);
+}
+
+.card-text{
+    padding: 32px 0px 32px 16px;
 }
 .portfolio-title{
     text-align: center;
@@ -191,6 +288,7 @@ ul, ol{
     font-weight: 500;
     line-height: 1.2;
     letter-spacing: 0.02em;
+    padding-bottom: 8px;
 }
 .portfolio-descr{
     color: #434455;
@@ -199,6 +297,8 @@ ul, ol{
     line-height: 1.5;
     letter-spacing: 0.02em;
 }
+
+
 
 
 .footer{
